@@ -1,0 +1,41 @@
+<%- include('partials/header') %>
+<div class="container">
+    <h1 class="mx-auto" style="width: 160px;">Members</h1>
+    <br>
+    <div class=" mx-auto" style="width: 230px;">
+    <a href="/member/add" class="btn btn-light btn-lg">+ Add Member to List</a>
+    </div>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Username</th>
+                <th scope="col">Password</th>
+                <th scope="col">Membership Status</th>
+                <th scope="col">E-Money</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach((e, index) =>{ %>
+             <tr>
+                 <th scope="row"><%= index+1%> </th>
+                 <td><%= e.first_name %> </td>
+                 <td><%= e.last_name %> </td>
+                 <td><%= e.username %> </td>
+                 <td><%= e.password %> </td>
+                 <td> <% if (e.MembershipStatus=== null) { %>
+                            <%= 'unknown' %> 
+                 <% } else {%>
+                     <%= e.MembershipStatus.status%>
+                 <% } %> 
+                 <td><%= e.emoney %> </td>
+
+                </td>
+                 <td><button class="btn btn-light btn-lg" ><a href="/member/<%=e.id%>/edit">Edit</a></button>  <button class="btn btn-light btn-lg"><a href="/member/<%=e.id%>/delete/">Delete</a></button>  <button class="btn btn-light btn-lg"></td>
+             </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>

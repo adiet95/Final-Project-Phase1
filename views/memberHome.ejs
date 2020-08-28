@@ -1,0 +1,35 @@
+<%- include("./partials/header") %>
+<body>
+	<h1>Welcome, <%= member.full_name %>. This is your page.</h1><hr>
+	<h2>Profile :</h2>
+	<table border="1">
+		<tr>
+			<th>Username</th>
+			<td><%= member.username %></td>
+			<td rowspan="4"><a href="/membership/<%= member.membership_status %>/<%= member.id %>/edit-profile"><input type="button" value="Edit Profile" style="width: 100%;"></a></td>
+		</tr>
+		<tr>
+			<th>Email</th>
+			<td><%= member.email %></td>
+		</tr>
+		<tr>
+			<th>First Name</th>
+			<td><%= member.first_name %></td>
+		</tr>
+		<tr>
+			<th>Last Name</th>
+			<td><%= member.last_name %></td>
+		</tr>
+		<tr>
+			<th>E-money</th>
+			<td><%= currencyFormatIDR(member.emoney) %></td>
+			<td><a href="/membership/<%= member.membership_status %>/<%= member.id %>/top-up"><input type="button" value="Top Up" style="width: 100%;"></a></td>
+		</tr>
+		<tr>
+			<th>Membership Status</th>
+			<td><%= member.membership_status %> membership</td>
+			<td><a href="/membership/<%= member.membership_status %>/<%= member.id %>/upgrade"><input type="button" value="Upgrade" style="width: 100%;"></a></td>
+		</tr>
+	</table><hr>
+</body>
+</html>

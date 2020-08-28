@@ -1,0 +1,17 @@
+<%- include("./partials/header") %>
+<body>
+	<h1>Edit Profile Information</h1><hr>
+	<form action="/membership/<%= member.membership_status %>/<%= member.id %>/edit-profile" method="post">
+		<label for="username">Username</label><br>
+		<input type="text" name="username" id="username" value="<%= member.username %>"><br><br>
+		<label for="email">Email</label><br>
+		<input type="email" name="email" id="email" value="<%= member.email %>"><br><br>
+		<label for="first_name">First Name</label><br>
+		<input type="text" name="first_name" id="first_name" value="<%= member.first_name %>"><br><br>
+		<label for="last_name">Last Name</label><br>
+		<input type="text" name="last_name" id="last_name" value="<%= member.last_name %>"><br><br>
+		<input type="text" name="membership_status" id="membership_status" value="<%= member.membership_status %>" style="display:none;">
+		<input type="submit" value="Update">
+	</form>
+</body>
+</html>

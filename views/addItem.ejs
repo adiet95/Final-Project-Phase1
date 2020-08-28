@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+<!-- Content-->
+<div class="container">
+<h2 class="text-center">Add Item</h2>
+<form action="/item/add" method="post" class="center">
+  <div class="form-group">
+  <label for="name">Item Name</label> <br>
+  <input class="form-control" type="text" name="name"> <br>
+  <label for="stock">Stock</label> <br>
+  <input class="form-control" type="text" name="stock"> <br>
+  <label for="price">Price</label> <br>
+  <input class="form-control" type="text" name="price"> <br>
+  <label for="MemberId">Member ID</label> <br>
+  <input class="form-control" type="text" name="MemberId"> <br>
+ <br><br>
+</div>
+<div class=" mx-auto" style="width: 200px;">
+  <button class="btn btn-primary" type="submit">Add Item</button>
+  &nbsp;
+  <a class="btn btn-danger" href="/item" >Cancel</a>
+  <br><br>
+</div>
+</form>
+</div>

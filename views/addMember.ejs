@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+<!-- Content-->
+<div class="container">
+<h2 class="text-center">Add Member</h2>
+<form action="/member/add" method="post" class="center">
+  <div class="form-group">
+  <label for="name">First Name</label> <br>
+  <input class="form-control" type="text" name="first_name"> <br>
+  <label for="name">Last Name</label> <br>
+  <input class="form-control" type="text" name="last_name"> <br>
+  <label for="released_year">Username</label> <br>
+  <input class="form-control" type="text" name="username"> <br>
+  <label for="released_year">Password</label> <br>
+  <input class="form-control" type="text" name="password"> <br>
+  <label for="genre">Genre</label> <br>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Option</label>
+    </div>
+    <select class="custom-select" name="genre" id="genre">
+      <option selected>Choose...</option>
+        <option value="regular">Regular</option>
+        <option value="pro">Pro</option>
+    </select>
+  </div>
+ <br><br>
+</div>
+<div class=" mx-auto" style="width: 160px;">
+  <button class="btn btn-primary" type="submit">Add Member</button>
+  <br><br>
+</div>
+</form>
+</div>

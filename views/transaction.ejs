@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+<div class="container">
+    <h1 class="text-center bg-secondary" > <%= cast.getfullName() %> </h1> 
+    <br><br><br>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Date</th>
+                <th scope="col">Member ID</th>
+                <th scope="col">Item ID</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach((e, index) =>{ %>
+            <tr>
+                <td><%= e.name %> </td>
+                 <td><%= e.description %></td>
+                 <td><%= e.amount %> </td>
+                 <td><%= e.date %></td>
+                 <td><%= e.MemberId %></td>
+                 <td><%= e.ItemId %></td>
+             </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>

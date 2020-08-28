@@ -1,0 +1,16 @@
+<%- include("./partials/header") %>
+<body class="text-center">
+  <form action="/login" method="post" class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+    <p>Don't have account? Please <a href="/register">register</a>.</p>
+    <% if (errors) { %>
+    <p style="background:gray; color:white;">Error : <%= errors %></p>
+    <% } %>
+    <label for="inputUsername" class="sr-only">Username</label>
+    <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus><br>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required><br>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+  </form>
+</body>
+</html>

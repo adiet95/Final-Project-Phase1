@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+<!-- Content-->
+<div class="container">
+<h2 class="text-center">Edit Member</h2>
+<form action="/member/<%=cast.id%>/edit" method="post" class="center">
+  <div class="form-group">
+  <label for="first_name">First Name</label> <br>
+  <input class="form-control" type="text" name="first_name" value="<%= member.first_name %> "> <br>
+  <label for="last_name">Last Name</label> <br>
+  <input class="form-control" type="text" name="last_name" value="<%= member.last_name %> "> <br>
+  <label for="username">Username</label> <br>
+  <input class="form-control" type="text" name="username" value="<%= member.username %> "> <br>
+  <label for="password">Password</label> <br>
+  <input class="form-control" type="text" name="password" value="<%= member.password %> "> <br>
+  <label for="membership_status">Membership Status</label> <br>
+    <label class="btn btn-secondary">  
+      <input type="radio" name="membership_status" id="option2" value="regular" <%= member.membership_status == 'regular' ? 'checked' : '' %> > Regular
+    </label>
+    &nbsp;
+    <label class="btn btn-secondary">
+      <input type="radio" name="membership_status" id="option3" value="pro" <%= member.membership_status == 'pro' ? 'checked' : '' %>> Pro
+    </label>
+  </div>
+ <br><br>
+</div>
+<div class=" mx-auto" style="width: 160px;">
+  <button class="btn btn-primary" type="submit">Edit Member</button>
+  <br><br>
+</div>
+</form>
+</div>

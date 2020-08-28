@@ -1,0 +1,10 @@
+<%- include("./partials/header") %>
+<body>
+	<h1>Membership Upgrade Confirmation</h1><hr>
+	<form action="/membership/free/<%= MemberId %>/upgrade" method="post">
+		<label>Are you sure you want to upgrade your membership to pro?</label><br>
+		<input type="submit" value="Yes">
+		<a href="/membership/free/<%= MemberId %>"><input type="button" value="No"></a>
+	</form>
+</body>
+</html>

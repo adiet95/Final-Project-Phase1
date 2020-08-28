@@ -1,0 +1,11 @@
+<%- include("./partials/header") %>
+<body>
+	<h1>Top Up E-money</h1><hr>
+	<form action="/membership/<%= member.membership_status %>/<%= member.id %>/top-up" method="post">
+		<label for="top_up_amount">Please insert your top up amount :</label><br>
+		<input type="number" name="top_up_amount" id="top_up_amount"><br><br>
+		<input type="text" name="membership_status" id="membership_status" value="<%= member.membership_status %>" style="display:none;">
+		<input type="submit" value="Top Up">
+	</form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<%- include('partials/header') %>
+<div class="container">
+  <h1 class="mx-auto" style="width: 150px;">Casts</h1>
+    <div class=" mx-auto" style="width: 230px;">
+    <a href="/item/add" class="btn btn-light btn-lg">+ Add Item +</a>
+    </div>
+
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Price</th>
+                <th scope="col">Member ID</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach((e, index) => { %>
+             <tr>
+                 <th scope="row"><%= index+1%> </th>
+                 <td><%= e.name %> </td>
+                 <td><%= e.stock %></td>
+                 <td><%= e.price %> </td>
+                 <td><%= e.memberId %>
+                </td>
+                 <td><button class="btn btn-light btn-lg" > <a href="/item/<%=e.id%>/edit">Edit Item</a></button> <button class="btn btn-light btn-lg" data-toggle="modal" data-target="#exampleModal"><a href="#"> Delete</a></button> <button class="btn btn-light btn-lg"><a href="//movies/<%=e.id%>">See Movie</a></button>
+                </td>
+             </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
